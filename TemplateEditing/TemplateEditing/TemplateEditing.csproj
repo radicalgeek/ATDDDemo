@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{D513E40E-4460-42DD-BE85-CDA323AF45E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>TemplateEditing</RootNamespace>
+    <AssemblyName>TemplateEditing</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Ionic.Zip">
+      <HintPath>..\..\BuildTasks\Ionic.Zip.dll</HintPath>
+    </Reference>
+    <Reference Include="MSBuild.Community.Tasks">
+      <HintPath>..\..\BuildTasks\MSBuild.Community.Tasks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Activities" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="TfsBuildExtensions.Activities">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.AWS">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.AWS.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.IIS7">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.IIS7.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.ILMerge">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.ILMerge.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.LabManagement">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.LabManagement.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.StyleCop">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.StyleCop.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.VirtualPC">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.VirtualPC.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.Activities.VisualStudio">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.Activities.VisualStudio.dll</HintPath>
+    </Reference>
+    <Reference Include="TfsBuildExtensions.TfsUtilities">
+      <HintPath>..\..\BuildTasks\TfsBuildExtensions.TfsUtilities.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\..\BuildProcessTemplates\AutoWebDeployWithVersioning.xaml">
+      <Link>AutoWebDeployWithVersioning.xaml</Link>
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
